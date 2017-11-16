@@ -1,0 +1,98 @@
+extends pug/layout.main.pug
+include pug/_mixin.pug
+
+
+block vars
+    - var pageTitle = 'Главная'
+    - var outSource = "."
+
+block body
+    +table()(bgcolor="#ffffff" style="max-width: 700px")
+        tr
+            +td()(style="padding-bottom: 0;")
+                +img(outSource + '/images/header.png', 'Совершай покупки с Apple Pay и картой Visa Сбербанк')
+        tr
+            +td()(style="padding: 30px 40px;").table-container--
+                +table()
+                    tr
+                        +td()(style="padding-top: 15px;") 
+                            +span('Уважаемый Иван Иванович,')(style="font-weight: 600; font-size: 18px;")
+                    tr
+                        +td() Благодарим Вас за проявленный интерес к предложениям компании «Сбербанк страхование»!
+                    tr
+                        +td() До надежной страховой защиты Ваших банковских карт остался всего один шаг. Пожалуйста, ознакомьтесь с документами во вложении: Страховым полисом, Правилами страхования и Памяткой страхователя.
+                    tr
+                        +td() Если Вы согласны с условиями страхования, 
+                            +a('#') перейдите к оплате полиса.
+                    tr
+                        +td()(style="padding: 12px")
+                    tr
+                        +td() Срок страхования будет равен 12 месяцам, начиная с 00 часов 00 минут пятнадцатого календарного дня, следующего за днем оплаты страховой премии.
+                    tr
+                        +td() Вы имеете право на возврат страховой премии в полном объеме в случае отказа от Полиса до начала срока его действия либо в течение 5 (пяти) рабочих дней с даты его отправки на указанный Вами адрес электронной почты, при условии отсутствия в данном периоде страхового случая.
+                    tr
+                        +td() Если у Вас возникли вопросы или трудности, пожалуйста, обращайтесь к нам по телефону: 
+                            +a('tel:88005555557')(style="color: #000000;") 8-800-555-55-57
+                            != ' (бесплатно для звонков по России).'
+                    +line('1px', '5px', '50px')
+                    tr
+                        +td() Мы всегда готовы предложить для Вас оптимальные решения по финансовой защите и удобный сервис оформления страхования онлайн по различным направлениям:
+                    tr
+                        +td()
+                            +table()
+                                tr
+                                    +td()(align="center" width="33.3333%" style="padding-left: 30px; padding-right: 30px; vertical-align: top").figure--
+                                        +a('#')
+                                            +img(outSource+'/images/house.png', 'Защита квартиры или дома')(style="margin-bottom: 25px; margin-top: 10px;")
+                                            +span('Защита квартиры или дома')(style="text-decoration:underline;")
+                                    +td()(align="center" width="33.3333%" style="padding-left: 30px; padding-right: 30px; vertical-align: top").figure--
+                                        +a('#')
+                                            +img(outSource+'/images/pot.png', 'Страхование путешественников')(style="margin-bottom: 25px; margin-top: 10px;")
+                                            +span('Страхование путешественников')(style="text-decoration:underline;")
+                                    +td()(align="center" width="33.3333%" style="padding-left: 30px; padding-right: 30px; vertical-align: top").figure--
+                                        +a('#')
+                                            +img(outSource+'/images/house_key.png', 'Страхование ипотеки')(style="margin-bottom: 25px; margin-top: 10px;")
+                                            +span('Страхование ипотеки')(style="text-decoration:underline;")
+                    tr.hidden-sx--
+                        +td()(style="padding: 20px 0")
+                    tr
+                        +td() Информация обо всех продуктах для частных и корпоративных клиентов доступна на сайте 
+                            +a('https://sberbankins.ru/') www.sberbankins.ru
+                    tr
+                        +td()
+                            i(style="display: block; font-style: italic;") С уважением и наилучшими пожеланиями,
+                            +span('Ханнес Чопра')(style="display: block; font-style: italic; font-weight: 600;")
+                            i(style="display: block; font-style: italic;") Генеральный директор ООО СК «Сбербанк страхование» 
+                    +line('1px', '0', '20px')
+                    tr
+                        +td()(style="font-size: 12px;") Если данное письмо адресовано не Вам или Вы изменили свое решение, отказаться от оформления можно 
+                            +a('#')(style="font-size: 12px;") здесь.
+                            != ' Надеемся, Вы вернетесь к нам снова.'
+                    tr
+                        +td()(style="font-size: 12px; padding-bottom: 0;") ООО СК «Сбербанк страхование». Лицензии Банка России СИ №4331 и СЛ №4331 выданы <br>05.08.2015 бессрочно.
+        tr
+            +td()(bgcolor="#249925" style="padding: 28px 40px").table-container--
+                +table()
+                    tr
+                        +td()(width="40%")(style="padding-bottom:0;")
+                            +table()
+                                tr
+                                    +td()(style="padding-bottom:0;").hidden-sx--
+                                        +aFooter('http://www.sberbank.ru')(title="www.sberbank.ru") www.sberbank.ru
+                                    +td()(style="padding-bottom:0;")
+                                        +a('https://vk.com/sberbank')
+                                            +img(outSource+'/images/soc_vk.png', 'vk')
+                                        != '  '
+                                        +a('https://www.facebook.com/sberbank')
+                                            +img(outSource+'/images/soc_fb.png', 'fb')
+                                        != '  '
+                                        +a('https://www.instagram.com/sberbank')
+                                            +img(outSource+'/images/soc_inst.png', 'inst')
+                        +td()(width="60%")(style="padding-bottom:0;")
+                            +table()
+                                tr
+                                    +td()(align="right" style="padding-bottom:0;")
+                                        +img(outSource+'/images/phone.png', 'phone')(style="display: inline-block; vertical-align: middle;")
+                                        != '  '
+                                        +aFooter('tel:88005555550')(title="Телефонный звонок")
+                                            != 'Телефонный звонок'
