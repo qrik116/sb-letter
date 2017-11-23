@@ -3,18 +3,23 @@ mixin table()
         if block
             block
 
+mixin tr()
+    tr(style="border-spacing:0;margin:0;padding:0")&attributes(attributes)
+        if block
+            block
+
 mixin td()
     td(height="100%" style="border: none!important; border-width: 0; margin: 0; padding: 0 0 25px 0; color: #5c5c5c; font: 15px 'Open Sans', Arial, sans-serif; line-height: 1.5; font-weight: 400")&attributes(attributes)
         if block
             block
 
 mixin a(href)
-    a(href=(href || '#') style="border: none!important; border-width: 0; margin:0; padding:0; color: #009942; font: 15px 'Open Sans', Arial, sans-serif; line-height: 1.5; -webkit-text-size-adjust:none; display: inline-block; font-weight: 600; text-decoration: none;" target="_blank")&attributes(attributes)
+    a(href=(href || '#') style="border: none; border-width: 0; margin:0; padding:0; color: #009942; font: 15px 'Open Sans', Arial, sans-serif; line-height: 1.5; -webkit-text-size-adjust:none; display: inline-block; font-weight: 600; text-decoration: none;" target="_blank")&attributes(attributes)
         if block
             block
 
 mixin aFooter(href)
-    a(href=(href || '#') style="border: none!important; border-width: 0; margin:0; padding:0; color: #ffffff; font: 13px Arial, sans-serif; line-height: 1.5; -webkit-text-size-adjust:none; display: inline-block; font-weight: 400;" target="_blank")&attributes(attributes)
+    a(href=(href || '#') style="border: none!important; border-width: 0; margin:0; padding:0; color: #ffffff; font: 13px 'Open Sans', Arial, sans-serif; line-height: 1.5; -webkit-text-size-adjust:none; display: inline-block; font-weight: 600;" target="_blank")&attributes(attributes)
         if block
             block
 
@@ -24,10 +29,12 @@ mixin span(text)
 mixin img(src, alt)
     img(src=(src || "") alt=(alt || "") border="0" style="border: none!important; border-width: 0; margin:0; padding:0; display:block; max-width: 100%")&attributes(attributes)
 
-mixin line(height, pt, pb)
-    tr
-        td(height="100%" style="border: none!important; border-width: 0; margin:0; padding: "+(pt || '0')+" 0 0;")
-    tr
-        td(bgcolor="#e5e5e5" height=height style="border: none!important; border-width: 0; margin:0; padding:0;")&attributes(attributes)
-    tr
-        td(height="100%" style="border: none!important; border-width: 0; margin:0; padding: 0 0 "+(pb || '0')+";")
+mixin line()
+    table(width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border:0;border-collapse:collapse!important;border-spacing:0;margin:0 auto")
+        tr(style="border-spacing:0;margin:0;padding:0")
+            td(height="1" style="border-collapse:collapse!important;border-spacing:0;border-top:1px solid #dadada;font-size:0;margin:0;padding:0")
+
+mixin button(href)
+    a(href=(href || '#') style="border: none!important; border-width: 0; margin:0; padding:0 30px; color: #ffffff; font: 15px 'Open Sans', sans-serif; line-height: 3; -webkit-text-size-adjust:none; display: inline-block; font-weight: 400; border-radius: 50px; background-color: #54b780; text-decoration: none;-webkit-box-shadow:0 1px 15px #b2b2b2; box-shadow: 0 1px 15px #b2b2b2;" target="_blank")&attributes(attributes)
+        if block
+            block

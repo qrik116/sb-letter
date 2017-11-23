@@ -105,7 +105,7 @@ const loadToWeb = {
 gulp.task('default:html', () => {
     return gulp.src(path.default.src.html)
         .pipe(plumber())
-        .pipe(pug({pretty: true}))
+        .pipe(pug())
         .pipe(gulp.dest(path.build.html));
 });
 gulp.task('default:html-watch', (done) => {
@@ -208,7 +208,7 @@ gulp.task('default:watch', () => {
 gulp.task('main:html', () => {
     return gulp.src(path.main.src.html)
         .pipe(plumber())
-        .pipe(pug({pretty: true}))
+        .pipe(pug({pretty: false}))
         .pipe(gulp.dest(path.build.html));
 });
 gulp.task('main:html-watch', (done) => {
