@@ -16,7 +16,7 @@ html(xmlns="http://www.w3.org/1999/xhtml")
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i")
         style(type="text/css").
-            @media (max-width:680px){[class].figure--{width:100%!important;padding:0!important;display:block;margin-bottom:40px!important}}@media (max-width:680px){[class].hidden-sx--{display:none!important}}@media (max-width:680px){[class].table-container--{padding-left:20px!important;padding-right:20px!important}}
+            @media (max-width:680px){[class].figure--{width:100%!important;padding:0!important;display:block;margin-bottom:40px!important}}@media (max-width:680px){[class].hidden-sx--{display:none!important}}@media (max-width:680px){[class].table-container--{padding-left:20px!important;padding-right:20px!important}}@media (max-width:680px){[class].table--{min-width:0!important;width:100%}}
         <!--[if mso]>
             style(type="text/css").
                 .wrapper {
@@ -25,7 +25,7 @@ html(xmlns="http://www.w3.org/1999/xhtml")
                 }
         <![endif]-->
     body(style="-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;background-color:#fff;margin:0;mso-margin-bottom-alt:0;mso-margin-top-alt:0;mso-padding-alt:0;padding:0;width:100%!important")
-        +table()(bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:0;border-collapse:collapse!important;border-spacing:0;margin:0 auto;min-width:700px").body-text
+        +table()(bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:0;border-collapse:collapse!important;border-spacing:0;margin:0 auto;min-width:700px").table--
             tr
                 +td()(align="center" style="padding-bottom: 0;")
                     block body
