@@ -125,17 +125,17 @@ gulp.task('default:jsVendors', () => {
 });
 gulp.task('default:images', () => {
     return gulp.src(path.default.src.images)
-        // .pipe(image({
-        //     pngquant: true,
-        //     optipng: true,
-        //     zopflipng: false,
-        //     jpegRecompress: false,
-        //     mozjpeg: false,
-        //     guetzli: false,
-        //     gifsicle: true,
-        //     svgo: true,
-        //     concurrent: 10
-        // }))
+        .pipe(image({
+            pngquant: true,
+            optipng: true,
+            zopflipng: false,
+            jpegRecompress: false,
+            mozjpeg: false,
+            guetzli: false,
+            gifsicle: true,
+            svgo: true,
+            concurrent: 10
+        }))
         .pipe(gulp.dest(path.build.images))
         .pipe(gulpif(loadToWeb.default.images, gulp.dest(path.web.images)))
         .pipe(reload({stream: true}));
