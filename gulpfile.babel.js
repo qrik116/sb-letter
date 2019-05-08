@@ -41,10 +41,10 @@ const path = {
         fonts: 'build/fonts/'
     },
     web: {
-        js: '',
-        css: '',
-        images: '',
-        fonts: ''
+        js: './',
+        css: './',
+        images: './',
+        fonts: './'
     },
     default: {
         src: {
@@ -52,8 +52,8 @@ const path = {
             sprite: 'src/default/sprite/**/*.svg',
             js: ['src/default/js/*.js', '!src/default/js/vendors.js'],
             jsVendors: 'src/default/js/vendors.js',
-            images: 'src/default/images/**/*.*',
-            fonts: 'src/default/fonts/**/*.*'
+            images: 'src/default/images/*',
+            fonts: 'src/default/fonts/*'
         },
         watch: {
             html: 'src/default/**/*.pug',
@@ -61,8 +61,8 @@ const path = {
             style: 'src/default/style/**/*.styl',
             js: ['src/default/js/*.js', '!src/default/js/vendors.js'],
             jsVendors: ['src/default/js/vendors/**/*.js', 'src/default/js/vendors.js'],
-            images: 'src/default/images/**/*.*',
-            fonts: 'src/default/fonts/**/*.*'
+            images: 'src/default/images/*',
+            fonts: 'src/default/fonts/*'
         }
     },
     main: {
@@ -125,17 +125,6 @@ gulp.task('default:jsVendors', () => {
 });
 gulp.task('default:images', () => {
     return gulp.src(path.default.src.images)
-        .pipe(image({
-            pngquant: true,
-            optipng: true,
-            zopflipng: false,
-            jpegRecompress: false,
-            mozjpeg: false,
-            guetzli: false,
-            gifsicle: true,
-            svgo: true,
-            concurrent: 10
-        }))
         .pipe(gulp.dest(path.build.images))
         .pipe(gulpif(loadToWeb.default.images, gulp.dest(path.web.images)))
         .pipe(reload({stream: true}));
