@@ -1,14 +1,12 @@
-include ../../default/pug/_mixins
-
-- var projectName = 'Письмо'
+- var projectName = 'Письмо Mob\'y'
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 html(xmlns="http://www.w3.org/1999/xhtml")
     block vars
     head
         title!= projectName + ' - ' + pageTitle
-        meta(charset="UTF-8")
-        meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(name="format-detection" content="telephone=no")
         meta(name="format-detection" content="date=no")
         meta(name="format-detection" content="address=no")
@@ -25,7 +23,7 @@ html(xmlns="http://www.w3.org/1999/xhtml")
                 }
         <![endif]-->
     body(style="-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;background-color:#fff;margin:0;mso-margin-bottom-alt:0;mso-margin-top-alt:0;mso-padding-alt:0;padding:0;width:100%!important")
-        +table()(bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:0;border-collapse:collapse!important;border-spacing:0;margin:0 auto;min-width:700px").table--
+        +table()(bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:0;border-collapse:collapse!important;border-spacing:0;margin:0 auto;min-width:700px").table--
             tr
-                +td()(align="center" style="padding-bottom: 0;")
+                +td()(align="center" style="padding-bottom:63px;padding-top:30px")
                     block body

@@ -4,7 +4,7 @@ include pug/_mixin.pug
 
 block vars
     - var pageTitle = 'Главная'
-    - var outSource = "https://raw.githubusercontent.com/qrik116/sb-letter-image/images/build"
+    - var outSource = "./"
 
 block body
     +table()(width="700" bgcolor="#ffffff" style="border:0;border-collapse:collapse!important;border-spacing:0;margin:0 auto")
@@ -94,11 +94,11 @@ block body
             +td()(bgcolor="#54b780" style="padding: 28px 40px").table-container--
                 +table()
                     +tr()
-                        +td()(style="font-size: 12px;color:#ffffff") Если данное письмо адресовано не Вам или Вы изменили свое решение, отказаться от <br>оформления можно 
+                        +td()(style="font-size: 12px;color:#ffffff") Если данное письмо адресовано не Вам или Вы изменили свое решение, отказаться от <br/>оформления можно 
                             +aFooter('#')(style="font-size: 12px;font-weight:700;") здесь.
                             != ' Надеемся, Вы вернетесь к нам снова.'
                     +tr()
-                        +td()(style="font-size: 12px;color:#ffffff") ООО СК «Сбербанк страхование». Лицензии Банка России СИ №4331 и СЛ №4331 выданы <br>05.08.2015 бессрочно.
+                        +td()(style="font-size: 12px;color:#ffffff") ООО СК «Сбербанк страхование». Лицензии Банка России СИ №4331 и СЛ №4331 выданы <br/>05.08.2015 бессрочно.
                 +table()
                     +tr()
                         +td()(width="33.33333%" style="padding-bottom:0;")

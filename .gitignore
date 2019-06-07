@@ -9,9 +9,9 @@ nbproject
 .project
 .settings
 .DS_Store
-/node_modules
-/build
-/imageMin
+node_modules
+build
+imageMin
 src/**/sprite.svg
 src/**/sprite.styl
 !src/handlebars/sprite.styl
