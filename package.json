@@ -37,6 +37,6 @@
     "gulp-rigger": "^0.5.8",
     "gulp-stylus": "^2.7.0",
     "gulp-uglify": "^3.0.2",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   }
 }
